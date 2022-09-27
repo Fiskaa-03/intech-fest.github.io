@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+header nav ul li .link_active {
+    color: #00EF26;
+}
+
+header nav ul li .link_active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #00EF26;
+    height: .03rem;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.button {
+    border-radius: 23px;
+    border: none;
+    font-size: 20px;
+    background-color: #139008;
+    padding: 10px 20px;
+    transition: .2s;
+}
+
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #00EF26;   
+}
+
+.title {
+    text-align: center;
+    color: #00EF26;
+    font-weight: 700;
+}
+
+/* style navbar */
+
+header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header .logo {
+    position: relative;
+}
+
+header .logo img {
+    width: 200px;
+}
+
+header .logo a {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   opacity: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000;
+    height: .03rem;
+    width: 0;
+    transition: width .3s ease 0s,left .3s ease 0s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+header nav ul li img {
+    display: none;
+}
+
+header button a {
+    padding: 5px 20px;
+}
+
+/* End Navbar */
+
+/* Banner */
+
+.banner {
+    height: 500px;
+    background-image: url('img/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.banner .greeting {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.banner .greeting h1 {
+    line-height: 1;
+}
+
+.banner .greeting span {
+    color: #00EF26;
+}
+
+.banner .greeting .btn-banner {
+    margin-top: 30px;
+}
+
+/* Strength */
+
+.strength {
+    margin-top: 120px;
+}
+
+.strength p {
+    text-align: center;
+    color: #797979;
+}
+
+.strength .strength-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.strength .strength-content .img-strength {
+    height: 400px;
+}
+
+.strength .strength-content .img-strength img {
+    height: 100%;
+}
+
+.strength .strength-content .strength-desc {
+    width: 50%;   
+}
+
+.strength .strength-content .strength-desc .list-strength-desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strength .strength-content .strength-desc .list-strength-desc p {
+    /* margin: 0 20px; */
+    cursor: pointer;
+    position: relative;
+}
+
+.strength .strength-content .strength-desc .list-strength-desc p#default {
+    margin-left: 0;
+}
+
+.strength .strength-content .strength-desc .list-strength-desc p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000;
+    height: .03rem;
+    width: 0;
+    transition: width .3s ease 0s,left .3s ease 0s;
+}
+
+.strength .strength-content .strength-desc .list-strength-desc p:hover:after {
+    width: 100%;
+}
+
+.strength .strength-content .strength-desc .content-strength-desc p {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.strength .strength-content .strength-desc button {
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+
+/* merchant */
+
+.merchant {
+    margin-top: 120px;
+}
+
+.merchant .merchant-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.merchant .merchant-logo img {
+    width: 250px;
+    margin-top: 20px;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 120px;
+    background-color: #10C900;
+    padding: 20px 0;
+    color: #fff;
+}
+
+footer .left-con {
+    width: 35%;
+}
+
+footer .left-con input {
+    width: 200px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+footer .left-con button {
+    width: 100px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #89FF9C;
+    font-weight: 700;
+    transition: .2s;
+    cursor: pointer;
+}
+
+footer .left-con button:hover {
+    color: #139008
+}
+
+footer .right-con i {
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+}
+
+footer .right-con i:hover {
+    color: #139008;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/* Features */
+
+.features {
+    margin-top: 120px;
+}
+
+.features .features-card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.features .features-card-wrapper .features-card {
+    width: 320px;
+    background-color: #10C900;
+    padding: 20px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 20px;
+}
+
+.features .features-card-wrapper .features-card:hover {
+    box-shadow:  rgba(100, 100, 111, .6) 0px 7px 29px 0px;;
+    transform: scale(1.1,1.1);
+}
+
+.features .features-card-wrapper .features-card img {
+    width: 80px;
+}
+
+.features .features-card-wrapper .features-card h3 {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.features .features-card-wrapper .features-card p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Promo */
+
+.promo {
+    margin-top: 120px;
+}
+
+.promo .promo-card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.promo .promo-card-wrapper .promo-card {
+    width: 320px;
+    background-color: #10C900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 20px;
+    color: #fff;
+}
+
+.promo .promo-card-wrapper .promo-card img {
+    width: 100%;
+    height: 213px;
+    border-radius: 10px;
+}
+
+.promo .promo-card-wrapper .promo-card h3 {
+    line-height: 1;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.promo .promo-card-wrapper .promo-card button {
+    margin-bottom: 10px;
+    padding: 2px 10px;
+    border-radius: 15px;
+    background-color: #89FF9C;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.promo .promo-card-wrapper .promo-card button:hover {
+    color:#139008;
+}
+
+
+@media screen and (max-width: 815px) {
+    .img-active {
+        border-bottom: #00EF26 solid 4px;
+    }
+
+    header nav {
+        position: fixed;
+        background-color:#139008;
+        left: 0;
+        top: 50%;
+        border-radius: 0 20px 20px 0;
+    }
+
+    header nav ul li{
+        display: block;
+        margin: 10px;
+    }
+
+    header nav ul li a {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    header nav ul li img {
+        display: block;
+        width: 30px;
+        opacity: 100;
+    }
+
+    .strength .strength-content {
+        flex-direction: column;
+    }
+
+    .strength .strength-content .strength-desc {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    footer .left-con {
+        width: 100%;
+    }
+
+    footer .right-con {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+}
