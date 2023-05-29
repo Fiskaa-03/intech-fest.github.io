@@ -171,7 +171,7 @@ header button a {
 /* Strength */
 
 .strength {
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 .strength p {
@@ -251,7 +251,7 @@ header button a {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .merchant .merchant-logo img {
@@ -262,7 +262,7 @@ header button a {
 /* Footer */
 
 footer {
-    margin-top: 120px;
+    margin-top: 60px;
     background-color: #10C900;
     padding: 20px 0;
     color: #fff;
@@ -312,7 +312,7 @@ footer p {
 /* Features */
 
 .features {
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 .features .features-card-wrapper {
@@ -357,7 +357,7 @@ footer p {
 /* Promo */
 
 .promo {
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 .promo .promo-card-wrapper {
@@ -413,6 +413,10 @@ footer p {
         border-bottom: #00EF26 solid 4px;
     }
 
+    header .logo img {
+        max-width: 150px;
+    }
+
     header nav {
         position: fixed;
         background-color:#139008;
@@ -439,6 +443,11 @@ footer p {
         display: block;
         width: 30px;
         opacity: 100;
+    }
+
+    header .button {
+        font-size: 16px;
+        padding: 0;
     }
 
     .strength .strength-content {
